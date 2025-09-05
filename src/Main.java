@@ -5,10 +5,10 @@ public class Main {
 
         System.out.println("Good morning!");
         System.out.println("Let's take attendance...");
-        System.out.println("Mr. Hernandez is present!");
         System.out.println("Alex is here");
-        System.out.println("Really?  No one else is present!?");
+        System.out.println("Mr. Hernandez is REALLY present!");
 
+        System.out.println("Tai is present");
 
         /*
         Scanner myTextScanner = new Scanner(System.in);  // Create a Scanner object
