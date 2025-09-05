@@ -6,6 +6,7 @@ public class Main {
         System.out.println("Good morning!");
         System.out.println("Let's take attendance...");
         System.out.println("Mr. Hernandez is present!");
+        System.out.println("Aman is present");
 
         /*
         Scanner myTextScanner = new Scanner(System.in);  // Create a Scanner object
