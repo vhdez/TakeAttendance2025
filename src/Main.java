@@ -5,7 +5,7 @@ public class Main {
 
         System.out.println("Good morning!");
         System.out.println("Let's take attendance...");
-        System.out.println("Alex is here");
+        System.out.println("Alex is present");
         System.out.println("Mr. Hernandez is REALLY present!");
 
         System.out.println("Tai is present");
