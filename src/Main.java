@@ -7,18 +7,24 @@ public class Main {
         System.out.println("Let's take attendance...");
 
 
-        System.out.println("Harry Grade 11 is present!");
-        System.out.println("Minghao Grade  12 is maybe present!");
-        System.out.println("Alex is present");
-        System.out.println("Sam is present");
-        System.out.println("Tai is present");
-        System.out.println("Adil is present.");
+
+       // System.out.println("Harry Grade 11 is present!");
+        //System.out.println("Minghao Grade  12 is maybe present!");
+       // System.out.println("Alex is present");
+       // System.out.println("Sam is present");
+       // System.out.println("Tai is present");
+       // System.out.println("Adil is present.");
 
         Teacher mrH = new Teacher();
         mrH.name = "Mr. Hernandez";
         mrH.present = false;
         mrH.password = 9884;
         mrH.greeting();
+
+        Student harry = new Student();
+        harry.name = "Harry";
+        harry.present = false;
+        harry.password = 0000;
 
         // 1. Create an Object for yourself
         // 2. Store YOUR values in YOUR object
