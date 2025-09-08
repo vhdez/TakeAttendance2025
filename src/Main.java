@@ -34,6 +34,7 @@ public class Main {
         Zhang.grade = 12;
 
 
+
         // 1. Create an Object for yourself
         // 2. Store YOUR values in YOUR object
         // 3. Tell YOUR object to announce themselves
