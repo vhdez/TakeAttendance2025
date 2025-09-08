@@ -5,6 +5,7 @@ public class Main {
 
         System.out.println("Good morning!");
         System.out.println("Let's take attendance...");
+        System.out.println("Aman is present YAYAAYAY");
 
 
 
@@ -20,6 +21,25 @@ public class Main {
         mrH.present = false;
         mrH.password = 9884;
         mrH.greeting();
+
+        Student alex = new Student();
+        alex.name = "Alexander Chancey";
+        alex.grade=10;
+        alex.password = 7373;
+        alex.present = false;
+
+        Student aman = new Student();
+        aman.name = "Aman Easterling";
+        aman.grade=12;
+        aman.password = 5259;
+        aman.present = false;
+        Student Zhang = new Student();
+        Zhang.name = "Minghao";
+        Zhang.password = 1234;
+        Zhang.present = false;
+        Zhang.grade = 12;
+
+
 
         Student harry = new Student();
         harry.name = "Harry";
@@ -47,7 +67,28 @@ public class Main {
                     mrH.present = true;
                 }
             }
-            mrH.status();
+
+            if (alex.name.equals(typedName)) {
+                if (alex.password == typedPasswordNumber) {
+                    alex.present = true;
+                    alex.greeting();
+                }
+            }
+
+            if (aman.name.startsWith(typedName)) {
+                if (aman.password == typedPasswordNumber) {
+                    aman.present = true;
+                    aman.greeting();
+                }
+            }
+            aman.status();
+
+            if(Zhang.name.equals(typedName)){
+                if(Zhang.password == typedPasswordNumber){
+                    Zhang.present = true;
+                }
+            }
+            Zhang.status();
 
             // 4. Get typing input to check for your name/password/presence
 
