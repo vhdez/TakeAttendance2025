@@ -8,6 +8,7 @@ public class Main {
         System.out.println("Harry Grade 11 is present!");
         System.out.println("Minghao Grade  12 is maybe present!");
         System.out.println("Alex is present");
+        System.out.println("Sam is present");
         Teacher mrH = new Teacher();
         mrH.name = "Mr. Hernandez";
         mrH.present = true;
