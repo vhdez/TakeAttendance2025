@@ -5,14 +5,18 @@ public class Main {
 
         System.out.println("Good morning!");
         System.out.println("Let's take attendance...");
-        System.out.println("Harry is present!");
-        System.out.println("Minghao is maybe present!");
+        System.out.println("Harry Grade 11 is present!");
+        System.out.println("Minghao Grade  12 is maybe present!");
         System.out.println("Alex is present");
-        System.out.println("Mr. Hernandez is REALLY present!");
+        Teacher mrH = new Teacher();
+        mrH.name = "Mr. Hernandez";
+        mrH.present = true;
+        mrH.status();
+
         System.out.println("Tai is present");
         System.out.println("Adil is present.");
 
-        /*
+
         Scanner myTextScanner = new Scanner(System.in);  // Create a Scanner object
         boolean notDoneYet = true;
         while (true) {
@@ -26,6 +30,6 @@ public class Main {
             }
         }
 
-         */
+
     }
 }
