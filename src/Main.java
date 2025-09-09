@@ -6,8 +6,6 @@ public class Main {
         System.out.println("Good morning!");
         System.out.println("Let's take attendance...");
         System.out.println("Sam is present");
-        System.out.println("Tai is present");
-        System.out.println("Adil is present.");
 
         Teacher mrH = new Teacher();
         String myName = "Mr. Hernandez";
@@ -57,8 +55,13 @@ public class Main {
         Scanner myTextScanner = new Scanner(System.in);  // Create a Scanner object
         boolean notDoneYet = true;
         while (notDoneYet) {
-            System.out.print("Type your name:");
-            String typedName = myTextScanner.nextLine();  // Read user input
+            System.out.print("Type your name or DONE:");
+            String typedName = myTextScanner.nextLine();
+            if (typedName.equals("DONE")) {
+                notDoneYet = false;
+                continue;
+            }
+            // Read user input
             System.out.print("Type your password:");
             String typedPassword = myTextScanner.nextLine();  // Read user input
 
