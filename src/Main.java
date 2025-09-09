@@ -44,6 +44,12 @@ public class Main {
         tai.grade = 12;
         tai.password = 1212;
 
+        Student Kabir = new Student();
+        Kabir.name = "Adil";
+        Kabir.present = false;
+        Kabir.grade = 12;
+        Kabir.password = 4167;
+
         // 1. Create an Object for yourself
         // 2. Store YOUR values in YOUR object
         // 3. Tell YOUR object to announce themselves
@@ -92,6 +98,13 @@ public class Main {
                 if(tai.password == typedPasswordNumber){
                     tai.present = true;
                     tai.status();
+                }
+            }
+
+            if(Kabir.name.equals(typedName)){
+                if(Kabir.password == typedPasswordNumber){
+                    Kabir.present = true;
+                    Kabir.status();
                 }
             }
 
