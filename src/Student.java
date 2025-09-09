@@ -9,6 +9,6 @@ public class Student {
     }
 
     void status() {
-        System.out.println("Student: " + name + "\nGrade: " + grade + "th\nPresent: " + present);
+        System.out.println("Student: " + name + " Grade: " + grade + "th Present: " + present);
     }
 }
