@@ -1,7 +1,4 @@
-public class Teacher {
-    String name;
-    boolean present;
-    int password;
+public class Teacher extends PersonWhoCanSignIn {
 
     void greeting() {
         System.out.println("Hello! " + name + " is here!");
@@ -11,4 +8,7 @@ public class Teacher {
         System.out.println("Teacher: " + name + " is Present: " + present);
     }
 
+    void usePhoneDuringClass() {
+
+    }
 }

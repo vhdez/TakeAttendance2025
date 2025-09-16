@@ -1,8 +1,5 @@
-public class Student {
-    String name;
+public class Student extends PersonWhoCanSignIn{
     int grade;
-    boolean present;
-    int password;
 
     void greeting() {
         System.out.println("Hello! " + name + " is here!");
