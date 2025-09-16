@@ -5,20 +5,48 @@ public class Main {
 
         System.out.println("Good morning!");
         System.out.println("Let's take attendance...");
-
-
-        System.out.println("Harry Grade 11 is present!");
-        System.out.println("Minghao Grade  12 is maybe present!");
-        System.out.println("Alex is present");
         System.out.println("Sam is present");
-        System.out.println("Tai is present");
-        System.out.println("Adil is present.");
 
         Teacher mrH = new Teacher();
-        mrH.name = "Mr. Hernandez";
+        String myName = "Mr. Hernandez";
+        mrH.name = myName;
         mrH.present = false;
         mrH.password = 9884;
-        mrH.greeting();
+
+        Student alex = new Student();
+        alex.name = "Alexander Chancey";
+        alex.grade=10;
+        alex.password = 7373;
+        alex.present = false;
+
+        Student aman = new Student();
+        aman.name = "Aman Easterling";
+        aman.grade=12;
+        aman.password = 5259;
+        aman.present = false;
+
+        Student Zhang = new Student();
+        Zhang.name = "Minghao";
+        Zhang.password = 1234;
+        Zhang.present = false;
+        Zhang.grade = 12;
+
+        Student harry = new Student();
+        harry.name = "Harry";
+        harry.present = false;
+        harry.password = 0000;
+
+        Student tai = new Student();
+        tai.name = "Tai";
+        tai.present = false;
+        tai.grade = 12;
+        tai.password = 1212;
+
+        Student Kabir = new Student();
+        Kabir.name = "Adil";
+        Kabir.present = false;
+        Kabir.grade = 12;
+        Kabir.password = 4167;
 
         Student Sam = new Student();
         Sam.name = "Sam";
@@ -35,8 +63,13 @@ public class Main {
         Scanner myTextScanner = new Scanner(System.in);  // Create a Scanner object
         boolean notDoneYet = true;
         while (notDoneYet) {
-            System.out.print("Type your name:");
-            String typedName = myTextScanner.nextLine();  // Read user input
+            System.out.print("Type your name or DONE:");
+            String typedName = myTextScanner.nextLine();
+            if (typedName.equals("DONE")) {
+                notDoneYet = false;
+                continue;
+            }
+            // Read user input
             System.out.print("Type your password:");
             String typedPassword = myTextScanner.nextLine();  // Read user input
 
@@ -47,9 +80,44 @@ public class Main {
             if (mrH.name.equals(typedName)) {
                 if (mrH.password == typedPasswordNumber) {
                     mrH.present = true;
+                    mrH.greeting();
                 }
             }
-            mrH.status();
+
+            if (alex.name.equals(typedName)) {
+                if (alex.password == typedPasswordNumber) {
+                    alex.present = true;
+                    alex.greeting();
+                }
+            }
+
+            if (aman.name.startsWith(typedName)) {
+                if (aman.password == typedPasswordNumber) {
+                    aman.present = true;
+                    aman.greeting();
+                }
+            }
+
+            if(Zhang.name.equals(typedName)){
+                if(Zhang.password == typedPasswordNumber){
+                    Zhang.present = true;
+                    Zhang.status();
+                }
+            }
+
+            if(tai.name.equals(typedName)){
+                if(tai.password == typedPasswordNumber){
+                    tai.present = true;
+                    tai.status();
+                }
+            }
+
+            if(Kabir.name.equals(typedName)){
+                if(Kabir.password == typedPasswordNumber){
+                    Kabir.present = true;
+                    Kabir.status();
+                }
+            }
 
             int typedPasswordNumber2 = Integer.valueOf(typedPassword);
             if (Sam.name.equals(typedName)); {
