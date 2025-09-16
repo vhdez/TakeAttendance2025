@@ -53,7 +53,6 @@ public class Main {
         Sam.grade = 12;
         Sam.present = false;
         Sam.password = 1111;
-        Sam.greeting();
 
 
         // 1. Create an Object for yourself
@@ -123,9 +122,10 @@ public class Main {
             if (Sam.name.equals(typedName)); {
                 if (Sam.password == typedPasswordNumber2) {
                     Sam.present = true;
+                    Sam.status();
                 }
             }
-            Sam.status();
+
 
             // 4. Get typing input to check for your name/password/presence
 
