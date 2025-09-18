@@ -11,9 +11,33 @@ public class Main {
         // 3. Add yourself to the correct ArrayList
         Teacher mrH = new Teacher();
         String myName = "Mr. Hernandez";
+        System.out.println(myName);
         mrH.name = myName;
         mrH.present = false;
+        System.out.println(mrH.present);
         mrH.password = 9884;
+        System.out.println(mrH.password);
+        System.out.println(mrH);
+
+        Teacher mrReddy = new Teacher();
+        mrReddy.name = "Mr. Hernandez";
+        mrReddy.present = false;
+        mrH.password = 4321;
+        System.out.println(mrReddy);
+
+        if (mrH == mrReddy) {
+            System.out.println("That makes no sense");
+        }
+
+        if (mrH.toString() == mrReddy.toString()) {
+            System.out.println("Their names are the same.");
+        }
+
+        if (mrH.toString().equals(mrReddy.toString())) {
+            System.out.println("Their names are the same.");
+        }
+
+        mrH.greeting();
 
         ArrayList<PersonWhoCanSignIn> everyone;
         everyone = new ArrayList<PersonWhoCanSignIn>();
@@ -105,7 +129,8 @@ public class Main {
             for (Student eachStudent : students) {
                 if (eachStudent.name.equals(typedName) && eachStudent.password == Integer.valueOf(typedPassword)) {
                     eachStudent.present = true;
-                    System.out.println(eachStudent.name + " marked present.");
+                    //System.out.println(eachStudent.name + " marked present.");
+                    eachStudent.greeting();
                     foundStudent = true;
                 }
             }

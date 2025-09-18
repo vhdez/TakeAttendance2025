@@ -2,7 +2,8 @@ public class Student extends PersonWhoCanSignIn{
     int grade;
 
     void greeting() {
-        System.out.println("Hello! " + name + " is here!");
+        super.greeting();
+        System.out.println("Yo! It's " + name + "! Wasssssup?");
     }
 
     void status() {
