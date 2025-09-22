@@ -6,38 +6,24 @@ public class Main {
         System.out.println("Good morning!");
         System.out.println("Let's take attendance...");
 
+        ArrayList<Student> feesSignupList = new ArrayList<Student>();
+
         // 1. Create an Object for yourself
         // 2. Store YOUR values in YOUR object
         // 3. Add yourself to the correct ArrayList
         Teacher mrH = new Teacher();
         String myName = "Mr. Hernandez";
         System.out.println(myName);
-        mrH.name = myName;
-        mrH.present = false;
-        System.out.println(mrH.present);
-        mrH.password = 9884;
-        System.out.println(mrH.password);
+
+        mrH.setName(myName);
+        mrH.setPresent(false);
+        System.out.println(mrH.isPresent());
+        mrH.setPassword(9884);
+        System.out.println(mrH.getPassword());
         System.out.println(mrH);
 
-        Teacher mrReddy = new Teacher();
-        mrReddy.name = "Mr. Hernandez";
-        mrReddy.present = false;
-        mrH.password = 4321;
+        Teacher mrReddy = new Teacher("Mr. Reddy",false,4321);
         System.out.println(mrReddy);
-
-        if (mrH == mrReddy) {
-            System.out.println("That makes no sense");
-        }
-
-        if (mrH.toString() == mrReddy.toString()) {
-            System.out.println("Their names are the same.");
-        }
-
-        if (mrH.toString().equals(mrReddy.toString())) {
-            System.out.println("Their names are the same.");
-        }
-
-        mrH.greeting();
 
         ArrayList<PersonWhoCanSignIn> everyone;
         everyone = new ArrayList<PersonWhoCanSignIn>();
@@ -46,60 +32,40 @@ public class Main {
         ArrayList<Student> students = new ArrayList<Student>();
         //students.add(mrH);
 
-        Student alex = new Student();
-        alex.name = "Alexander Chancey";
-        alex.grade=10;
-        alex.password = 7373;
-        alex.present = false;
+        Student alex = new Student("Alexander Chancey", false, 7373, 10, 574388L);
         everyone.add(alex);
         students.add(alex);
+        feesSignupList.add(alex);
 
-        Student aman = new Student();
-        aman.name = "Aman Easterling";
-        aman.grade=12;
-        aman.password = 5259;
-        aman.present = false;
+        Student aman = new Student("Aman Easterling", false, 5259, 12);
         everyone.add(aman);
         students.add(aman);
 
-        Student Zhang = new Student();
-        Zhang.name = "Minghao";
-        Zhang.password = 1234;
-        Zhang.present = false;
-        Zhang.grade = 12;
+        Student Zhang = new Student("Minghao", false, 1234, 12, 1234567890);
         everyone.add(Zhang);
         students.add(Zhang);
+        feesSignupList.add(Zhang);
 
-        Student harry = new Student();
-        harry.name = "Harry";
-        harry.present = false;
-        harry.password = 0000;
+        Student harry = new Student("Harry", false, 0000, 11);
         everyone.add(harry);
         students.add(harry);
 
-        Student tai = new Student();
-        tai.name = "Tai";
-        tai.present = false;
-        tai.grade = 12;
-        tai.password = 1212;
+        Student tai = new Student("Tai", false, 1212, 12, 564768594l);
         everyone.add(tai);
         students.add(tai);
 
-        Student Kabir = new Student();
-        Kabir.name = "Adil";
-        Kabir.present = false;
-        Kabir.grade = 12;
-        Kabir.password = 4167;
+        Student Kabir = new Student("Adil", false , 4167, 12);
         everyone.add(Kabir);
         students.add(Kabir);
 
-        Student Sam = new Student();
-        Sam.name = "Sam";
-        Sam.grade = 12;
-        Sam.present = false;
-        Sam.password = 1111;
+        Student Sam = new Student("Sam", false , 1111, 12);
         everyone.add(Sam);
         students.add(Sam);
+
+        mrReddy.chargeFees(feesSignupList);
+        mrH.greeting();
+        mrH.getStudents().add(alex);
+        mrH.getStudents().add(Zhang);
 
         // 1. Create an Object for yourself
         // 2. Store YOUR values in YOUR object
@@ -127,8 +93,8 @@ public class Main {
 
             boolean foundStudent = false;
             for (Student eachStudent : students) {
-                if (eachStudent.name.equals(typedName) && eachStudent.password == Integer.valueOf(typedPassword)) {
-                    eachStudent.present = true;
+                if (eachStudent.getName().equals(typedName) && eachStudent.getPassword() == Integer.valueOf(typedPassword)) {
+                    eachStudent.setPresent(true);;
                     //System.out.println(eachStudent.name + " marked present.");
                     eachStudent.greeting();
                     foundStudent = true;
@@ -138,5 +104,10 @@ public class Main {
                 System.out.println(typedName + " OR " + typedPassword + " are wrong");
             }
         }
+
+        mrH.takeAttendance();
+        mrH.usePhoneDuringClass();
+
     }
+
 }
